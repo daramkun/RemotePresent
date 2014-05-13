@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FE3D7CDE1667270F00A248FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE3D7CDD1667270F00A248FE /* UIKit.framework */; };
+		FE3D7CE01667270F00A248FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE3D7CDF1667270F00A248FE /* Foundation.framework */; };
+		FE3D7CE21667270F00A248FE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE3D7CE11667270F00A248FE /* CoreGraphics.framework */; };
+		FE3D7CE81667270F00A248FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE3D7CE61667270F00A248FE /* InfoPlist.strings */; };
+		FE3D7CEA1667270F00A248FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3D7CE91667270F00A248FE /* main.m */; };
+		FE3D7CEE1667270F00A248FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3D7CED1667270F00A248FE /* AppDelegate.m */; };
+		FE3D7CFD1667284600A248FE /* BroadcastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3D7CFB1667284600A248FE /* BroadcastViewController.m */; };
+		FE3D7CFE1667284600A248FE /* BroadcastViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE3D7CFC1667284600A248FE /* BroadcastViewController.xib */; };
+		FE3D7D041667294A00A248FE /* ConnectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3D7D021667294A00A248FE /* ConnectViewController.m */; };
+		FE3D7D051667294A00A248FE /* ConnectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE3D7D031667294A00A248FE /* ConnectViewController.xib */; };
+		FE3D7D0916672BEA00A248FE /* BluetoothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3D7D0716672BEA00A248FE /* BluetoothViewController.m */; };
+		FE3D7D0A16672BEA00A248FE /* BluetoothViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE3D7D0816672BEA00A248FE /* BluetoothViewController.xib */; };
+		FE3D7D0E16672C6700A248FE /* OptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3D7D0C16672C6700A248FE /* OptionViewController.m */; };
+		FE3D7D0F16672C6700A248FE /* OptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE3D7D0D16672C6700A248FE /* OptionViewController.xib */; };
+		FE74266C166DE9830068D01A /* FileStream.m in Sources */ = {isa = PBXBuildFile; fileRef = FE74266B166DE9830068D01A /* FileStream.m */; };
+		FEAD0877166B755A00DA6D1D /* NetworkStream.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAD0876166B755A00DA6D1D /* NetworkStream.m */; };
+		FEF7DD91166C740B0002B69E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEF7DD90166C740B0002B69E /* AudioToolbox.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FE3D7CD91667270F00A248FE /* RemotePresent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemotePresent.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE3D7CDD1667270F00A248FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FE3D7CDF1667270F00A248FE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FE3D7CE11667270F00A248FE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FE3D7CE51667270F00A248FE /* RemotePresent-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RemotePresent-Info.plist"; sourceTree = "<group>"; };
+		FE3D7CE71667270F00A248FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FE3D7CE91667270F00A248FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FE3D7CEB1667270F00A248FE /* RemotePresent-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RemotePresent-Prefix.pch"; sourceTree = "<group>"; };
+		FE3D7CEC1667270F00A248FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FE3D7CED1667270F00A248FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FE3D7CFA1667284600A248FE /* BroadcastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BroadcastViewController.h; sourceTree = "<group>"; };
+		FE3D7CFB1667284600A248FE /* BroadcastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BroadcastViewController.m; sourceTree = "<group>"; };
+		FE3D7CFC1667284600A248FE /* BroadcastViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BroadcastViewController.xib; sourceTree = "<group>"; };
+		FE3D7D011667294A00A248FE /* ConnectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectViewController.h; sourceTree = "<group>"; };
+		FE3D7D021667294A00A248FE /* ConnectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectViewController.m; sourceTree = "<group>"; };
+		FE3D7D031667294A00A248FE /* ConnectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectViewController.xib; sourceTree = "<group>"; };
+		FE3D7D0616672BEA00A248FE /* BluetoothViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothViewController.h; sourceTree = "<group>"; };
+		FE3D7D0716672BEA00A248FE /* BluetoothViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothViewController.m; sourceTree = "<group>"; };
+		FE3D7D0816672BEA00A248FE /* BluetoothViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BluetoothViewController.xib; sourceTree = "<group>"; };
+		FE3D7D0B16672C6700A248FE /* OptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionViewController.h; sourceTree = "<group>"; };
+		FE3D7D0C16672C6700A248FE /* OptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionViewController.m; sourceTree = "<group>"; };
+		FE3D7D0D16672C6700A248FE /* OptionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionViewController.xib; sourceTree = "<group>"; };
+		FE3D7D1A16672EA400A248FE /* PresentActionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentActionDelegate.h; sourceTree = "<group>"; };
+		FE74266A166DE9830068D01A /* FileStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileStream.h; sourceTree = "<group>"; };
+		FE74266B166DE9830068D01A /* FileStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileStream.m; sourceTree = "<group>"; };
+		FE74266E166DEDA20068D01A /* Stream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Stream.h; sourceTree = "<group>"; };
+		FE9E355D16770A8000BC737B /* PacketEnumeration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PacketEnumeration.h; sourceTree = "<group>"; };
+		FEAD0875166B755A00DA6D1D /* NetworkStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkStream.h; sourceTree = "<group>"; };
+		FEAD0876166B755A00DA6D1D /* NetworkStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkStream.m; sourceTree = "<group>"; };
+		FEF7DD90166C740B0002B69E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE3D7CD61667270F00A248FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEF7DD91166C740B0002B69E /* AudioToolbox.framework in Frameworks */,
+				FE3D7CDE1667270F00A248FE /* UIKit.framework in Frameworks */,
+				FE3D7CE01667270F00A248FE /* Foundation.framework in Frameworks */,
+				FE3D7CE21667270F00A248FE /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FE3D7CCE1667270F00A248FE = {
+			isa = PBXGroup;
+			children = (
+				FE3D7CE31667270F00A248FE /* RemotePresent */,
+				FE3D7CDC1667270F00A248FE /* Frameworks */,
+				FE3D7CDA1667270F00A248FE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FE3D7CDA1667270F00A248FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE3D7CD91667270F00A248FE /* RemotePresent.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE3D7CDC1667270F00A248FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FEF7DD90166C740B0002B69E /* AudioToolbox.framework */,
+				FE3D7CDD1667270F00A248FE /* UIKit.framework */,
+				FE3D7CDF1667270F00A248FE /* Foundation.framework */,
+				FE3D7CE11667270F00A248FE /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE3D7CE31667270F00A248FE /* RemotePresent */ = {
+			isa = PBXGroup;
+			children = (
+				FE3D7CFF1667285200A248FE /* ViewControllers */,
+				FE3D7D1216672DA300A248FE /* Protocols */,
+				FE3D7D1E16673C5400A248FE /* Settings */,
+				FEAD0873166B752C00DA6D1D /* Utilities */,
+				FE3D7CEC1667270F00A248FE /* AppDelegate.h */,
+				FE3D7CED1667270F00A248FE /* AppDelegate.m */,
+				FE3D7CE41667270F00A248FE /* Supporting Files */,
+			);
+			path = RemotePresent;
+			sourceTree = "<group>";
+		};
+		FE3D7CE41667270F00A248FE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE3D7CE51667270F00A248FE /* RemotePresent-Info.plist */,
+				FE3D7CE61667270F00A248FE /* InfoPlist.strings */,
+				FE3D7CE91667270F00A248FE /* main.m */,
+				FE3D7CEB1667270F00A248FE /* RemotePresent-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FE3D7CFF1667285200A248FE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FE3D7D001667293500A248FE /* Tab Views */,
+				FE3D7D1B166735AC00A248FE /* Gesture View */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FE3D7D001667293500A248FE /* Tab Views */ = {
+			isa = PBXGroup;
+			children = (
+				FE3D7D1016672D2600A248FE /* Interface Builder Files */,
+				FE3D7CFA1667284600A248FE /* BroadcastViewController.h */,
+				FE3D7CFB1667284600A248FE /* BroadcastViewController.m */,
+				FE3D7D011667294A00A248FE /* ConnectViewController.h */,
+				FE3D7D021667294A00A248FE /* ConnectViewController.m */,
+				FE3D7D0616672BEA00A248FE /* BluetoothViewController.h */,
+				FE3D7D0716672BEA00A248FE /* BluetoothViewController.m */,
+				FE3D7D0B16672C6700A248FE /* OptionViewController.h */,
+				FE3D7D0C16672C6700A248FE /* OptionViewController.m */,
+			);
+			name = "Tab Views";
+			sourceTree = "<group>";
+		};
+		FE3D7D1016672D2600A248FE /* Interface Builder Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE3D7D1116672D3200A248FE /* iPhone Xibs */,
+			);
+			name = "Interface Builder Files";
+			sourceTree = "<group>";
+		};
+		FE3D7D1116672D3200A248FE /* iPhone Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				FE3D7CFC1667284600A248FE /* BroadcastViewController.xib */,
+				FE3D7D031667294A00A248FE /* ConnectViewController.xib */,
+				FE3D7D0816672BEA00A248FE /* BluetoothViewController.xib */,
+				FE3D7D0D16672C6700A248FE /* OptionViewController.xib */,
+			);
+			name = "iPhone Xibs";
+			sourceTree = "<group>";
+		};
+		FE3D7D1216672DA300A248FE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FE3D7D1A16672EA400A248FE /* PresentActionDelegate.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		FE3D7D1B166735AC00A248FE /* Gesture View */ = {
+			isa = PBXGroup;
+			children = (
+				FE3D7D1C166735BC00A248FE /* Interface Builder Files */,
+			);
+			name = "Gesture View";
+			sourceTree = "<group>";
+		};
+		FE3D7D1C166735BC00A248FE /* Interface Builder Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE3D7D1D166735C400A248FE /* iPhone Xibs */,
+			);
+			name = "Interface Builder Files";
+			sourceTree = "<group>";
+		};
+		FE3D7D1D166735C400A248FE /* iPhone Xibs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "iPhone Xibs";
+			sourceTree = "<group>";
+		};
+		FE3D7D1E16673C5400A248FE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		FEAD0873166B752C00DA6D1D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FEAD0875166B755A00DA6D1D /* NetworkStream.h */,
+				FEAD0876166B755A00DA6D1D /* NetworkStream.m */,
+				FE74266A166DE9830068D01A /* FileStream.h */,
+				FE74266B166DE9830068D01A /* FileStream.m */,
+				FE74266E166DEDA20068D01A /* Stream.h */,
+				FE9E355D16770A8000BC737B /* PacketEnumeration.h */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE3D7CD81667270F00A248FE /* RemotePresent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE3D7CF71667270F00A248FE /* Build configuration list for PBXNativeTarget "RemotePresent" */;
+			buildPhases = (
+				FE3D7CD51667270F00A248FE /* Sources */,
+				FE3D7CD61667270F00A248FE /* Frameworks */,
+				FE3D7CD71667270F00A248FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RemotePresent;
+			productName = RemotePresent;
+			productReference = FE3D7CD91667270F00A248FE /* RemotePresent.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE3D7CD01667270F00A248FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = Daramkun;
+			};
+			buildConfigurationList = FE3D7CD31667270F00A248FE /* Build configuration list for PBXProject "RemotePresent" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FE3D7CCE1667270F00A248FE;
+			productRefGroup = FE3D7CDA1667270F00A248FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE3D7CD81667270F00A248FE /* RemotePresent */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE3D7CD71667270F00A248FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE3D7CE81667270F00A248FE /* InfoPlist.strings in Resources */,
+				FE3D7CFE1667284600A248FE /* BroadcastViewController.xib in Resources */,
+				FE3D7D051667294A00A248FE /* ConnectViewController.xib in Resources */,
+				FE3D7D0A16672BEA00A248FE /* BluetoothViewController.xib in Resources */,
+				FE3D7D0F16672C6700A248FE /* OptionViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE3D7CD51667270F00A248FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE3D7CEA1667270F00A248FE /* main.m in Sources */,
+				FE3D7CEE1667270F00A248FE /* AppDelegate.m in Sources */,
+				FE3D7CFD1667284600A248FE /* BroadcastViewController.m in Sources */,
+				FE3D7D041667294A00A248FE /* ConnectViewController.m in Sources */,
+				FE3D7D0916672BEA00A248FE /* BluetoothViewController.m in Sources */,
+				FE3D7D0E16672C6700A248FE /* OptionViewController.m in Sources */,
+				FEAD0877166B755A00DA6D1D /* NetworkStream.m in Sources */,
+				FE74266C166DE9830068D01A /* FileStream.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FE3D7CE61667270F00A248FE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE3D7CE71667270F00A248FE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FE3D7CF51667270F00A248FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FE3D7CF61667270F00A248FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FE3D7CF81667270F00A248FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RemotePresent/RemotePresent-Prefix.pch";
+				INFOPLIST_FILE = "RemotePresent/RemotePresent-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FE3D7CF91667270F00A248FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RemotePresent/RemotePresent-Prefix.pch";
+				INFOPLIST_FILE = "RemotePresent/RemotePresent-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE3D7CD31667270F00A248FE /* Build configuration list for PBXProject "RemotePresent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE3D7CF51667270F00A248FE /* Debug */,
+				FE3D7CF61667270F00A248FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE3D7CF71667270F00A248FE /* Build configuration list for PBXNativeTarget "RemotePresent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE3D7CF81667270F00A248FE /* Debug */,
+				FE3D7CF91667270F00A248FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FE3D7CD01667270F00A248FE /* Project object */;
+}
