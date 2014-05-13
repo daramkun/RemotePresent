@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5">
+  <zoom_level>8</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>72</x>
+      <y>112</y>
+      <w>240</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>/Packet/
+--
+--
+/+ PacketType : PacketType/
+/+ DeviceType : DeviceType/
+/+ ControllerType : RemoteControllerType/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>16</x>
+      <y>208</y>
+      <w>344</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>UnknownPacket
+--
+- deviceType : DeviceType
+- controllerType : RemoteControllerType
+--
++ UnknownPacket(dt: DeviceType, ct: RemoteControllerType)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>376</x>
+      <y>48</y>
+      <w>448</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>FromReceiverPacket
+--
+- deviceName : string
+- password : string
+- ep : IPEndPoint
+--
++ DeviceName : string
++ Password : string
++ DeviceIP : IPAddress
++ DevicePort : int
+
+= FromReceiverPacket(dt, ct, ep: IPEndPoint, deviceName: string, password: string)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>168</x>
+      <y>152</y>
+      <w>40</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>24;56;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>336</x>
+      <y>96</y>
+      <w>56</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>40;24;24;136</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>400</x>
+      <y>208</y>
+      <w>368</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>FromControllerPacket
+--
+- deviceName : string
+- ep : IPEndPoint
+--
++ DeviceName : string
++ DeviceIP : IPAddress
++ DevicePort : int
+
+= FromControllerPacket(dt, ct, ep: IPEndPoint, deviceName: string)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>24</x>
+      <y>304</y>
+      <w>344</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>CommandPacket
+--
+- type : CommandType
+- x : sbyte
+- y : sbyte
+- z : sbyte
+--
++ CommandType : CommandType
++ X : sbyte
++ Y : sbyte
++ Z : sbyte
+
+= CommandPacket(dt, ct, type: CommandType, x : sbyte, y, z)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>336</x>
+      <y>224</y>
+      <w>80</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>64;48;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>168</x>
+      <y>248</y>
+      <w>40</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>24;56;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>520</x>
+      <y>360</y>
+      <w>312</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>PacketAnalyzer
+--
+
+--
++ AnalyzingPacket(buffer: byte[], ep: IPEndPoint) : Packet
++ PackingPacket(packet: Packet) : byte[]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>344</x>
+      <y>368</y>
+      <w>192</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>24;24;176;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>560</x>
+      <y>288</y>
+      <w>136</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>24;24;120;72</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>760</x>
+      <y>152</y>
+      <w>40</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>24;24;24;208</additional_attributes>
+  </element>
+</diagram>

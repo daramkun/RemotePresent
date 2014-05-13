@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="11.5">
+  <zoom_level>8</zoom_level>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>32</x>
+      <y>112</y>
+      <w>248</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>RemotePresentViewController
+--
+_- m_deviceName : UITextField_
+_- m_noticeLabel : UILabel_
+_- m_broadcastButton : UIButton_
+- m_broadcastSocket : int
+- m_sendThread : NSThread*
+- m_recvThread : NSThread*
+--
++ broadcastStart(sender: UIButton*): void
++ clickHelpButton(sender: UIButton*): void
+
+- sendThread(object: id): void
+- recvThread(object: id): void
+- getDeviceNameFileName(): const char*
+- makePassword(): void
+- _isNetworkAvailable(): bool</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>32</x>
+      <y>328</y>
+      <w>336</w>
+      <h>256</h>
+    </coordinates>
+    <panel_attributes>GestureViewController
+--
+- gesLeftSwipe : UISwipeGestureRecognizer
+- getRightSwipe : UISwipeGestureRecognizer
+- gesTap : UITapGestureRecognizer
+- gesDoubleTap : UITapGestureRecognizer
+- gesLong : UILongPressGestureRecognizer
+- clientSocket : int
+- checkReceiver : NSThread
+_- m_noticeLabel : UILabel_
+- lastTouchX : int
+- lastTouchY : int
+--
++ initWithSocket(socket: int): id
++ swipeGesture(gesture: UISwipeGestureRecognizer*): void
++ tapGesture(gesture: UITapGestureRecognizer*): void
++ doubleTapGesture(UITapGestureRecognizer*): void
++ longPressGesture(UILongPressGestureRecognizer*): void
+
+- checkReceiverIsConnected(object: id): void
+- sendPacket(packet: Packet*): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>376</x>
+      <y>184</y>
+      <w>248</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>HelpViewController
+--
+_- webView : UIWebView_
+_- tabBar : UITabBar_
+_- connItem : UITabBarItem_
+--
++ pressBackButton(sender: UIButton*): void
++ navigate(title: NSString*): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>256</x>
+      <y>200</y>
+      <w>136</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>120;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>184</x>
+      <y>280</y>
+      <w>40</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>24;48;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Class</type>
+    <coordinates>
+      <x>656</x>
+      <y>152</y>
+      <w>168</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>Packet
+# C struct
+--
+- errHeader : byte
+- packetType : byte
+- deviceType : byte
+- version : byte
+######################
+# To Receiver Packet type
+- deviceName : char[21]
+# To App Packet type
+- deviceName : char[21]
+- password : char[5]
+# Command Packet type
+- commandType : byte
+- x : char
+- y : char
+- z : char
+######################
+- remoteType : byte
+- errFooter : byte</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>256</x>
+      <y>144</y>
+      <w>416</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>400;24;24;24</additional_attributes>
+  </element>
+  <element>
+    <type>com.umlet.element.Relation</type>
+    <coordinates>
+      <x>344</x>
+      <y>376</y>
+      <w>328</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>312;24;24;24</additional_attributes>
+  </element>
+</diagram>
