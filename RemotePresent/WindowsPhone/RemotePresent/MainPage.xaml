@@ -1,0 +1,81 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="RemotePresent.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="696"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    Language="ko-kr"
+    shell:SystemTray.IsVisible="True"
+    BackKeyPress="PhoneApplicationPage_BackKeyPress"
+    Loaded="PhoneApplicationPage_Loaded">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <controls:Pivot Title="Remote Present" Name="mainPivot" SelectionChanged="mainPivot_SelectionChanged">
+            <controls:PivotItem Header="브로드캐스트">
+                <Grid>
+                    <TextBlock Height="30" HorizontalAlignment="Left" Margin="14,8,0,0" Name="textBlock1" Text="기기 이름" VerticalAlignment="Top" />
+                    <TextBox Height="90" HorizontalAlignment="Left" Margin="0,39,0,0" Name="txtDeviceName" VerticalAlignment="Top" Width="456" FontSize="32" Text="Remote Present" TextChanged="txtDeviceName_TextChanged" />
+                    <TextBlock Height="30" HorizontalAlignment="Left" Margin="14,169,0,0" Name="textBlock2" Text="1회용 패스워드" VerticalAlignment="Top" />
+                    <TextBox Height="90" HorizontalAlignment="Left" Margin="0,200,0,0" Name="txtPassword" VerticalAlignment="Top" Width="456" IsReadOnly="True" TextAlignment="Center" FontSize="32" />
+                </Grid>
+            </controls:PivotItem>
+ 
+            <controls:PivotItem Header="수동연결">
+                <Grid>
+                    <TextBlock Height="30" HorizontalAlignment="Left" Margin="14,8,0,0" Name="textBlock3" Text="연결할 IP" VerticalAlignment="Top" />
+                    <TextBox Height="90" HorizontalAlignment="Left" Margin="0,39,0,0" Name="txtIP" VerticalAlignment="Top" Width="456" FontSize="32" InputScope="Number" TextChanged="txtIP_TextChanged" />
+                </Grid>
+            </controls:PivotItem>
+
+            <controls:PivotItem Header="설정">
+                <Grid>
+                    <toolkit:ToggleSwitch Header="리얼 스와이프" Height="111" HorizontalAlignment="Left" Margin="0,8,0,0" Name="tgsRealSwipe" VerticalAlignment="Top" Width="456" Checked="tgsRealSwipe_Checked" Unchecked="tgsRealSwipe_Unchecked" />
+                    <toolkit:ToggleSwitch Header="스크린 레이저" Height="111" HorizontalAlignment="Left" Margin="0,130,0,0" Name="tgsScreenLaser" VerticalAlignment="Top" Width="456" Checked="tgsScreenLaser_Checked" Unchecked="tgsScreenLaser_Unchecked" />
+                </Grid>
+            </controls:PivotItem>
+        </controls:Pivot>
+    </Grid>
+ 
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+    <shell:SystemTray.ProgressIndicator>
+        <shell:ProgressIndicator IsVisible="False" IsIndeterminate="True" />
+    </shell:SystemTray.ProgressIndicator>
+
+    <phone:PhoneApplicationPage.Resources>
+        <shell:ApplicationBar x:Key="broadcaster" IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="Images/broadcast.png" Text="브로드캐스트" Click="btnBroadcast_Click" x:Name="btnBroadcast"/>
+            <shell:ApplicationBarIconButton IconUri="Images/pause.png" Text="브로드캐스트 취소" Click="btnBroadcastCancel_Click" x:Name="btnBroadcastCancel"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="도움말" Click="mnuHelp_Click"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+
+        <shell:ApplicationBar x:Key="connector" IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="Images/link.png" Text="연결" Click="btnConnect_Click" x:Name="btnConnect" />
+            <shell:ApplicationBarIconButton IconUri="Images/pause.png" Text="연결 취소" Click="btnConnectCancel_Click" x:Name="btnConnectCancel"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="도움말" Click="mnuHelp_Click"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+
+        <shell:ApplicationBar x:Key="configure" IsVisible="True" IsMenuEnabled="True" Mode="Minimized">
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="도움말" Click="mnuHelp_Click"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.Resources>
+    
+</phone:PhoneApplicationPage>

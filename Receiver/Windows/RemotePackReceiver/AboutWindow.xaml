@@ -1,0 +1,15 @@
+﻿<Window x:Class="RemotePresentReceiver.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="About Remote Pack Receiver" Height="260" Width="458" WindowStartupLocation="CenterScreen" ShowInTaskbar="False" ResizeMode="NoResize" Background="White" Icon="/RemotePresentReceiver;component/Resources/Icon.ico">
+    <Grid>
+        <Image Height="81" HorizontalAlignment="Left" Margin="12,12,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="81" Source="/RemotePresentReceiver;component/Resources/Cloud.png" OpacityMask="{x:Null}" AllowDrop="False" />
+        <Label Content="Remote Pack Receiver" Height="52" Margin="99,12,15,0" Name="label1" VerticalAlignment="Top" FontSize="30" />
+        <TextBlock Height="23" Margin="99,70,15,0" Name="textBlock1" Text="for Remote Present, Remote MediaControl, Remote GamePad" VerticalAlignment="Top" FontSize="11" />
+        <Label Content="Version" Height="28" HorizontalAlignment="Left" Margin="37,99,0,0" Name="label2" VerticalAlignment="Top" Width="67" FontWeight="Bold" FontStyle="Normal" />
+        <Label Content="Copyright" Height="28" HorizontalAlignment="Left" Margin="37,133,0,0" Name="label3" VerticalAlignment="Top" Width="67" FontWeight="Bold" FontStyle="Normal" />
+        <Label Content="1.0.0.0" Height="28" Margin="110,99,15,0" Name="label4" VerticalAlignment="Top" />
+        <Label Content="Copyright (C) 2012 Daramkun All Right Reserved" Height="28" Margin="110,133,15,0" Name="label5" VerticalAlignment="Top" />
+        <Button Content="OK" Height="23" Margin="128,179,128,0" Name="button1" VerticalAlignment="Top" Click="button1_Click" />
+    </Grid>
+</Window>
