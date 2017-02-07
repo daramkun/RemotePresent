@@ -86,8 +86,8 @@
     delegate.deviceName = textFieldDeviceName.text;
     delegate.nonePasswordMode = switchPasswordEnabled.on;
     
-    [recvThread release];
-    [sendTimer release];
+    //[recvThread release];
+    //[sendTimer release];
     
     [delegate saveOptionsToFile];
     
